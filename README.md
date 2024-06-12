@@ -76,11 +76,47 @@ Data cleaning involved several steps:
 - **Outlier Detection and Removal**: The Interquartile Range (IQR) method was used to detect and remove outliers.
 - **Handling Inconsistent Values**: Categorical values were standardized to ensure consistency.
 
-## Obtaining Derived Metrics
+## Overall Insights Obtained from Analysis
 
-Derived metrics were created to enhance the dataset, such as calculating the mean altitude from the provided altitude range.
+# The EDA revealed several key insights:
 
-#### Code Example:
+Quality Distribution: Quality attributes such as Aroma, Flavor, and Aftertaste show normal distribution with slight skewness towards higher scores.
+Correlation: Significant positive correlations were found between Aroma, Flavor, and Total Cup Points.
+Altitude Impact: Higher altitudes were associated with better coffee quality scores.
+Processing Method: Washed/Wet processing methods generally yielded higher quality scores. 
 
-```python
-df_cleaned['mean_altitude'] = (df_cleaned['altitude_low_meters'] + df_cleaned['altitude_high_meters']) / 2
+# Key Findings:
+
+•	Identification of Key Factors Affecting Coffee Quality:
+
+o	Through univariate analysis, we identified aroma, flavor, aftertaste, acidity, and body as the key factors affecting coffee quality.
+o	Bivariate analysis revealed strong correlations between aroma and flavor, as well as between processing method and flavor.
+
+•	Understanding the Relationship Between Different Variables:
+
+o	The correlation matrix highlighted significant relationships between variables such as acidity and flavor, altitude and cupping score, and processing method and aftertaste.
+o	Segmented univariate analysis showed variations in quality measures across different coffee varieties and processing methods.
+
+•	Recommendations for Improving Coffee Quality and Production Practices:
+
+o	Optimizing processing methods to enhance flavor profiles and aftertaste.
+o	Selecting suitable coffee varieties based on desired quality attributes.
+o	Implementing farming practices tailored to specific altitudes and regions to improve overall coffee quality.
+o	Monitoring and controlling factors such as moisture levels and defects to ensure consistent quality.
+
+•	Important Variables:
+o	Aroma, flavor, aftertaste, acidity, body
+o	Processing method, coffee variety, altitude, region
+
+
+
+
+
+•	Dependencies:
+o	Aroma and flavor are strongly correlated, indicating that improvements in aroma may lead to enhancements in flavor.
+o	Processing method has a significant impact on aftertaste, with certain methods yielding better results.
+o	Altitude and region influence coffee quality, with specific regions known for producing beans with distinct flavor profiles.
+
+### Conclusion
+      The analysis provided valuable insights into factors affecting coffee quality. Recommendations include optimizing processing methods, selecting suitable coffee varieties, and tailoring farming practices to specific altitudes and regions.
+
